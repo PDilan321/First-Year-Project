@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello world</title>
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<body>
+<div class="container">
+    <div class="header">
+        <div class="gamename">GUESS OR DRINK</div>
+    </div>
+    <div class="playercards">
+        <div class="topcard">
+            Players
+        </div>
+        <div class="cardsflexcontainer">
+            <div class="playercard">
+                <span>Luke</span><span> is drawing </span>
+                <div>Score : 0</div>
+            </div>
+            <div class="playercard">
+                <span>Luke</span><span> is drawing </span>
+                <div>Score : 0</div>
+            </div>
+            <div class="playercard">
+                <span>Luke</span><span> is drawing </span>
+                <div>Score : 0</div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="canvascontainer">
+        <canvas id="draw" width="600" height="400">Canvas not supported</canvas>
+    </div>
+    <div class="chat">
+        <div id="message-container"></div>
+        <form id="send-container" autocomplete="off">
+            <input type="text" id="message-input">
+            <button type="submit" id="send-button">Send</button>
+        </form>
+    </div>
+    <div class="fotter"></div>
+</div>
+
+    <section class="container">
+        <div id="toolbar" style="position: absolute; left: -300px; top: -50px;">
+          <label for="stroke" style="position: absolute; top: 60px;width: 200px; height: 50px; left: 690px;">Stroke</label>
+            <input id="stroke" name='stroke' type="color" style="position:absolute; top: 90px;width: 200px; height: 50px; left: 620px;">
+            <label for="lineWidth" style="position: absolute; top: 60px;width: 200px; height: 50px; left: 930px;">Line Width</label>
+            <input id="lineWidth" name='lineWidth' type="number" value="5" style="position:absolute; top: 90px; left:890px;width: 200px; height: 50px;">
+            <button class="button gameButton" id="clear"style="position: absolute; top: 60px;width: 200px; height: 3px; left: 1130px;">Clear</button>
+
+            <!-- <label for="stroke" id='worD' style="position: absolute; top: 60px;width: 200px; height: 10px; left: 1580px;">Replace Word</label> -->
+        </div>
+    </section>
+
+<script src="pictionnary.js"></script>
+<script>
+
+
+</script>
+
+</body>
+</html>
