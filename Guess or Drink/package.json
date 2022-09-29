@@ -1,0 +1,20 @@
+{
+  "name": "pictionnary",
+  "version": "1.0.0",
+  "description": "Multiplayer pictionnary game",
+  "main": "app.js",
+  "scripts": {
+    "devStart": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "app.js"
+  },
+  "author": "Dilan Patel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+     body {
+     	background-color: #650483;
+     }
+    .glow {
+    	font-family: "Impact", sans-serif;
+    	font-size: 5em;
+  		color: #FFFF00;
+  		text-align: center;
+  		line-height: 0.0625em;
+  		letter-spacing: 2px;
+    }
+
+    .test{
+    	color: white ;
+    }
+
+    .usernameandinvitecode {
+    	height: 30px;
+    	width: 250px;
+    	font-size: 20pt;
+    	text-align: center;
+    	background-color: #FFFF00;
+    	outline-color: #650483;
+    }
+
+    .button {
+    	height: 75px;
+		width: 110px;
+    	background-color: #FFFF00;
+    	border: none;
+    	color: black;
+    	text-align: center;
+    	font-size: 15px;
+    	padding: 16px 32px;
+		transition-delay: 0.02s;
+		cursor: pointer;
+    }
+
+	.gameButton {
+		background-color: #FFFF00;
+		color: black;
+		position: relative;
+		bottom: 10%;
+		left: 37%;
+	}
+
+	.gameButton:hover {
+		background-color: white;
+		color: black;
+	}
+	</style>
+	<title>GUESS OR DRINK: HOME PAGE</title>
+	<h1 class="glow">GUESS OR DRINK</h1>
+	<p class="test" align="center">Fun art, not fine art</p>
+
+	<center><input class="usernameandinvitecode" type="text" placeholder="Enter Username" name="uname" id="Username" required style="position:relative; left:140px;">
+
+	<input type="checkbox" id="DrunkDrawing" style="position: relative; top: 40px; right: 60px;" onclick="myFunction()">
+  	<label for="Bike" style="position: relative; top: 40px; font-size: 22px; right: 60px;">Drunk Drawing</label>
+	<a href="play.html">
+		<button onclick="saveName()" class="button gameButton"  style = "position:relative; left:-200px; top:100px";>Play</button>
+	</a>
+
+
+</head>
+
+<body>
+	<div style="position: relative; color: white">
+		<p style="position: fixed; bottom: 0; width:100%; text-align: center"> This game is a fun twist on the classic game Pictionary. Please note drinking is not mandatory and players should drink responsibly if choosing to drink. The Game Rules:<br> * For a set number of round players will take turns drawing a given word </br> <br>* Each player will have 90 seconds to draw the word.</br>* All other players are guessers and have 60 seconds (after 30 seconds has elapsed) to guess what is being drawn.<br>* Points gained by the guessers are equivalent to the time remaining when the word is guessed. </br><br> * For each person who guesses the word correctly the player drawing will also receive an amount of points relative to the number of players.</br> <br>* If played using drunk mode and used as a drinking game, along side the normal rules: </br>
+	<br>- Given at least one player guesses the word any guessers who did 	not guess should drink.</br>
+	<br>- If no guessers guess the word the person drawing should drink.</br>
+		</p>
+		<script type="text/javascript">
+			function saveName(){
+      			// Save name to localStorage
+      			const Usernamee = document.getElementById('Username');
+      			localStorage.setItem('name', Usernamee)
+      			sessionStorage.playername = Usernamee.value;
+      		}
+      		var TheyChoseDrunkMode = false;
+      		function myFunction(){
+      		const test = document.getElementById('DrunkDrawing').checked;
+      		if (test){
+      			TheyChoseDrunkMode = true;
+      			sessionStorage.Drunk = true;
+      		}	
+      		}
+
+		</script>
+</body>
+</html>
